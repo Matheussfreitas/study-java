@@ -32,4 +32,13 @@ public class CatalogoConvidados {
     public void exibirConvidados() {
         System.out.println(convidadosSet);
     }
+
+    public static void main(String[] args) {
+        CatalogoConvidados catalogo = new CatalogoConvidados();
+        catalogo.adicionarConvidado("Maria", 123456);
+        catalogo.adicionarConvidado("João", 123456);
+        catalogo.adicionarConvidado("Maria", 654321);
+        catalogo.adicionarConvidado("José", 987654);
+        catalogo.exibirConvidados();
+    }
 }
