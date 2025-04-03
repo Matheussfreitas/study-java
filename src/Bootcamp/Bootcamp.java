@@ -1,19 +1,16 @@
 package Bootcamp;
 
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Bootcamp {
   private String nome;
   private String descricao;
-  private LocalDate inicio;
-  private LocalDate fim;
-
-  public Bootcamp(String nome, String descricao) {
-    this.nome = nome;
-    this.descricao = descricao;
-    this.inicio = LocalDate.now();
-    this.fim = inicio.plusDays(60);
-  }
+  private final LocalDate inicio = LocalDate.now();
+  private final LocalDate fim = inicio.plusDays(45);
+  private Set<Dev> devsInscritos = new LinkedHashSet<>();
+  private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
   public String getNome() {
     return nome;
@@ -30,13 +27,48 @@ public class Bootcamp {
   public LocalDate getInicio() {
     return inicio;
   }
-  public void setInicio(LocalDate inicio) {
-    this.inicio = inicio;
-  }
   public LocalDate getFim() {
     return fim;
   }
-  public void setFim(LocalDate fim) {
-    this.fim = fim;
+  public Set<Dev> getDevsInscritos() {
+    return devsInscritos;
+  }
+  public void setDevsInscritos(Set<Dev> devsInscritos) {
+    this.devsInscritos = devsInscritos;
+  }
+  public Set<Conteudo> getConteudos() {
+    return conteudos;
+  }
+  public void setConteudos(Set<Conteudo> conteudos) {
+    this.conteudos = conteudos;
+  }
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((devsInscritos == null) ? 0 : devsInscritos.hashCode());
+    result = prime * result + ((conteudos == null) ? 0 : conteudos.hashCode());
+    return result;
+  }
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Bootcamp other = (Bootcamp) obj;
+    if (devsInscritos == null) {
+      if (other.devsInscritos != null)
+        return false;
+    } else if (!devsInscritos.equals(other.devsInscritos))
+      return false;
+    if (conteudos == null) {
+      if (other.conteudos != null)
+        return false;
+    } else if (!conteudos.equals(other.conteudos))
+      return false;
+    return true;
   }
 }
