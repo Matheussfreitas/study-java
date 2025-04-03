@@ -1,18 +1,42 @@
-## Getting Started
+# Teste de Software - Estrutura do Projeto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este repositório contém conteúdos organizados sobre Testes de Software, abordando conceitos essenciais e práticas recomendadas. Abaixo está a estrutura do projeto:
 
-## Folder Structure
+## Estrutura de Pastas
+```
+📦 Study-Java
+ ┣ 📂 collections
+ ┃ ┗ 📜 README.md   # Conceitos e práticas sobre Collections em Java
+ ┣ 📂 stream
+ ┃ ┗ 📜 README.md   # Manipulação de fluxos de dados usando Java Streams
+ ┣ 📂 maven
+ ┃ ┗ 📜 README.md   # Gerenciamento de dependências e build com Maven
+ ┣ 📂 testes
+ ┃ ┗ 📜 README.md   # Tipos de testes e frameworks utilizados
+ ┣ 📂 projetos
+ ┃ ┗ 📜 README.md   # Projetos práticos aplicando Testes de Software
+ ┗ 📜 README.md     # Documentação principal do repositório
+```
 
-The workspace contains two folders by default, where:
+## 📂 Collections
+Contém conteúdos relacionados ao uso de **Collections** em Java, como listas, conjuntos e mapas, além de boas práticas e otimização.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 📂 Stream
+Explicação e exemplos sobre a API **Java Streams**, utilizada para manipulação eficiente de coleções de dados.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📂 Maven
+Introdução sobre o uso do **Maven** para gerenciar dependências, compilar projetos e automatizar builds.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 📂 Testes
+Informações detalhadas sobre os **níveis de testes**, incluindo:
+- Teste de Unidade
+- Teste de Integração
+- Teste de Sistema
+- Teste de Regressão
+- Frameworks utilizados (JUnit, Mockito, etc.)
 
-## Dependency Management
+## 📂 Projetos
+Projetos práticos aplicando os conceitos de Testes de Software, incluindo exemplos reais e desafios.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+📌 Para mais detalhes, consulte os **READMEs individuais** dentro de cada pasta.
